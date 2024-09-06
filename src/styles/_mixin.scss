@@ -1,0 +1,27 @@
+@mixin heading($spacing: 3px, $weight: 700, $case: uppercase){
+    word-spacing: $spacing;
+    font-weight: $weight;
+    text-transform: $case;
+}
+
+@mixin flex($jc: center, $ai: center, $gap: 1rem, $dir: column){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $gap;
+}
+
+@mixin grid($col: 1fr, $gap: 1rem, $row: unset){
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+    gap: $gap;
+}
+
+@mixin center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

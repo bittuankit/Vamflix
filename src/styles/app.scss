@@ -1,5 +1,58 @@
+@import "mixin";
+
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.admin-container{
+    height: 100vh;
+    background-color: rgb(240, 240, 240);
+    @include grid(1fr 4fr,2rem);
+
+    > aside{
+        width: 100%;
+        background: #fff;
+        padding: 1rem;
+        z-index: 10;
+        overflow-y: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        > div {
+            margin: 2rem 1rem;
+            > h5 {
+                @include heading(2px);
+                opacity: 0.6;
+                margin: 1rem 0;
+            }
+            > ul {
+                @include flex(unset,unset,0.5rem,column);
+                list-style: none;
+                > li {
+                    padding: .5rem .2rem;
+                    border-radius: .5rem;
+                    word-spacing: 5rem;
+                    a {
+                        opacity: 0.8;
+                        @include flex(unset,center,.5rem,row)
+                    }
+                }
+            }
+        }
+    }
 }
