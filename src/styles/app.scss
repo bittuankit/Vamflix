@@ -1,11 +1,11 @@
 @import "mixin";
+@import "dashboard.scss";
 
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 }
-
 
 *{
     padding: 0;
@@ -16,6 +16,14 @@
 a{
     color: black;
     text-decoration: none;
+}
+
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
 }
 
 .admin-container{
@@ -41,7 +49,7 @@ a{
                 margin: 1rem 0;
             }
             > ul {
-                @include flex(unset,unset,0.5rem,column);
+                @include flex(column,unset,unset,0.5rem);
                 list-style: none;
                 > li {
                     padding: .5rem .2rem;
@@ -49,7 +57,7 @@ a{
                     word-spacing: 5rem;
                     a {
                         opacity: 0.8;
-                        @include flex(unset,center,.5rem,row)
+                        @include flex(row,unset)
                     }
                 }
             }

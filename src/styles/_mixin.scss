@@ -4,7 +4,7 @@
     text-transform: $case;
 }
 
-@mixin flex($jc: center, $ai: center, $gap: 1rem, $dir: column){
+@mixin flex($dir: column, $jc: center, $ai: center, $gap: 0.5rem){
     display: flex;
     flex-direction: $dir;
     justify-content: $jc;
